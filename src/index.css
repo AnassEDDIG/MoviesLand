@@ -1,0 +1,108 @@
+/* Main website fonts */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Cairo:200,300,regular,500,600,700,800,900);
+
+/* tailwindimport */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* some global rules and minor adjustements for a certain pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cairo, Popins, Arial, Helvetica, sans-serif;
+}
+
+.app {
+    background-image: url(assets/texture.png);
+    background-size: contain;
+}
+
+.dark .bg {
+    background-image: url(assets/texture.png);
+    background-size: contain;
+}
+
+nav,
+.categories,
+.hidden-menu {
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 90vh;
+    padding: 10px;
+}
+
+.not-Found {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* adjusting the carousel design to  support dark theme */
+.slick-slide>div {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.dark .slick-dots li button::before {
+    color: white;
+}
+
+.slick-next::before {
+    color: black;
+}
+
+.dark .slick-next::before {
+    color: white;
+}
+
+.dark .slick-prev::before {
+    color: white;
+}
+
+.slick-prev::before {
+    color: black;
+}
+
+.dark label {
+    color: white;
+}
+
+/* simple animation for not found page */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}

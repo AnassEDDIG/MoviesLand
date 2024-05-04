@@ -1,0 +1,5 @@
+export {MovieDetail} from "./MovieDetail"
+export {Search} from "./Search"
+export {MovieList} from "./MovieList"
+export {NotFound} from "./NotFound"
+export {Discover} from "./Discover"
